@@ -1,12 +1,10 @@
-# TODO: Add dynamic JAVA_VERSION
 FROM gcr.io/distroless/java17-debian12:latest AS builder
 WORKDIR /build
 
-ADD https://api.purpurmc.org/v2/purpur/{{MINECRAFT_VERSION}}/latest/download purpur.jar
+ADD https://api.purpurmc.org/v2/purpur/1.18.1/latest/download purpur.jar
 RUN ["/usr/bin/java", "-DPurpur.IReallyDontWantSpark=true", "-jar", "purpur.jar"]
 
 
-# TODO: Add dynamic JAVA_VERSION
 FROM gcr.io/distroless/java17-debian12:latest
 
 WORKDIR /data
