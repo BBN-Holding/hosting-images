@@ -1,4 +1,5 @@
 {
+    "lock": false,
     "imports": {
         "bbn-one/": "https://raw.githubusercontent.com/BBN-Holding/bbn.one/3ee0584/",
     }
